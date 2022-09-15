@@ -29,7 +29,7 @@ class TestPessoa {
 	void testAdicionarElementoLista(){
 		List listaDeCandidato = []
 
-	//	listaDeCandidato.add(new PessoaFisica())
+		listaDeCandidato.add(new PessoaFisica())
 		int resultado = listaDeCandidato.size().toInteger()
 
 		int resultadoEsperado = 1
