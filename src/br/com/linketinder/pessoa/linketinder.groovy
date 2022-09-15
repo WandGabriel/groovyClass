@@ -34,9 +34,9 @@ def empresaCinco = new PessoaJuridica(nome:"Lajes ltda.",email: "candidatos@laje
 List listaDeCandidatos = [entrevistado,entrevistadoDois,entrevistadoTres,entrevistadoQuatro,entrevistadoCinco]
 List listaDeEmpresas = [empresaUm,empresaDois,empresaTres,empresaQuatro,empresaCinco]
 listaDeCandidatos.each {
-	println(it)
+	println(it.toString())
 }
 println("--------------------------------------------------------------------")
 listaDeEmpresas.each {
-	println (it)
+	println (it.toString())
 }

@@ -1,8 +1,5 @@
 package br.com.linketinder.pessoa
 
-import groovy.transform.ToString
-
-@ToString
 class Pessoa {
 	String nome
 	String email
@@ -12,5 +9,16 @@ class Pessoa {
 
 	void adicionarCompetencia(String competencia){
 		listaDeCompetencia.add(competencia)
+	}
+
+	@Override
+	public String toString() {
+		return "Pessoa{" +
+				"nome='" + nome + '\'' +
+				", email='" + email + '\'' +
+				", estado='" + estado + '\'' +
+				", cep=" + cep +
+				", listaDeCompetencia=" + listaDeCompetencia +
+				'}';
 	}
 }
