@@ -1,5 +1,6 @@
 import br.com.linketinder.pessoa.PessoaFisica
-import org.junit.Assert
+import br.com.linketinder.pessoa.PessoaJuridica
+import static org.junit.Assert.*
 import org.junit.Test
 
 class TestPessoa {
@@ -22,7 +23,7 @@ class TestPessoa {
 		pessoaFisicaEsperado.estado = 'GO'
 		pessoaFisicaEsperado.descricaoPessoal = 'Teste'
 
-		Assert.assertEquals(pessoaFisica.toString(), pessoaFisicaEsperado.toString())
+		assertEquals(pessoaFisica.toString(), pessoaFisicaEsperado.toString())
 	}
 
 	@Test
@@ -34,7 +35,18 @@ class TestPessoa {
 
 		int resultadoEsperado = 1
 
-		Assert.assertEquals(resultadoEsperado,resultado)
+		assertEquals(resultadoEsperado,resultado)
+	}
+
+	@Test
+	void testCriaObjetoPessoaJuridia(){
+		def pessoaJuridicaTest = new PessoaJuridica()
+		pessoaJuridicaTest.cnpj = 12312312312311
+
+		def pessoaJuridicaTestEsperado = new PessoaJuridica()
+		pessoaJuridicaTestEsperado.cnpj = 12312312312311
+
+		assertEquals(pessoaJuridicaTest.toString(),pessoaJuridicaTestEsperado.toString())
 	}
 
 }
